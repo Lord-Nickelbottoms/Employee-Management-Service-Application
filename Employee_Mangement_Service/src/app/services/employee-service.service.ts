@@ -8,7 +8,7 @@ import { Employee } from '../employee';
 })
 export class EmployeeServiceService {
 
-  private url = 'https://f827-154-0-10-27.in.ngrok.io/';
+  private url = 'https://a05e-154-0-10-27.in.ngrok.io/';
 
   constructor(private httpClient: HttpClient) {}
 
