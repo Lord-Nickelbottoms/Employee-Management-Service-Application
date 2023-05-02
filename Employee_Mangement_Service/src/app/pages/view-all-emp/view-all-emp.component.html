@@ -13,7 +13,16 @@
         <th> </th>
     </tr>
 
-    <tr>
+    <tr *ngFor="let item of employees">
+        <td>{{ employees.employeeNumber}}</td>
+        <td>{{ employees.firstName }}</td>
+        <td>{{ employees.surname }}</td>
+        <td>{{ employees.email }}</td>
+        <td>{{ employees.address}}</td>
+        <td>{{ employees.department}}</td>
+        <td><button routerLink="/pages/view-single-emp">View Details</button></td>
+    </tr>
+    <!-- <tr>
         <td>03449</td>
         <td>Nizaam </td>
         <td>Haffejee</td>
@@ -21,9 +30,9 @@
         <td>Milpack, The Media Mill Building</td>
         <td>IT</td>
         <td><button routerLink="/pages/view-single-emp">View Details</button></td>
-    </tr>
+    </tr> -->
 
-    <tr>
+    <!-- <tr>
         <td>03450</td>
         <td>Nande </td>
         <td>Toyi</td>
@@ -53,7 +62,7 @@
         <td>IT</td>
         <td> <button routerLink="/pages/view-single-emp">View Details</button></td>
 
-    </tr>
+    </tr> -->
 
    
 
