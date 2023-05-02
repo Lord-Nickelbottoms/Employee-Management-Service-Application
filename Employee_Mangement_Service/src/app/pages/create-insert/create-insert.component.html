@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<section class="create_container">
+<form class="create_container" method="post">
 
     <h2 class="heading">Create/Insert Employee</h2>
 
@@ -57,11 +57,11 @@
 
 
         <div class="button">
-            <button>Insert Employee</button>
+            <button (click)="saveEmployee()">Insert Employee</button>
         </div>
         
     </form>
-</section>
+</form>
 <br>
 <app-footer></app-footer>
 
