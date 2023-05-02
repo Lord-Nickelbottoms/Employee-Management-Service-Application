@@ -45,8 +45,12 @@ public class EmployeeController {
 
     @GetMapping(value = "/{id}")
     public Optional<Employee> findOne(Employee employee) {
+        
+
         return employeeRepo.findById(employee.getEmployeeID());
     }
+
+
 
 
     @PutMapping("/{id}")
@@ -58,4 +62,5 @@ public class EmployeeController {
     public void delete(@PathVariable int id) {
         employeeRepo.deleteById(id);
     }
+
 }

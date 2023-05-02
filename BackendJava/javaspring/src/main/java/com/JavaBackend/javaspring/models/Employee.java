@@ -8,21 +8,24 @@ import jakarta.persistence.Id;
 @Entity
 public class Employee {
     private int employeeID;
+    private String emp_num;
     private String firstName;
-    private String lastName;
+    private String surname;
     private String email;
+    private String emp_address;
     private String department;
-    private String phoneNumber;
 
 
     //This is a constructor for the employee class
-    public Employee(int employeeID, String firstName, String lastName, String email, String department, String phoneNumber)    {
+    public Employee(int employeeID, String employeeNumber, String Name, String Surname, String email,String address ,String department)    {
         this.employeeID = employeeID;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.emp_num = employeeNumber;
+        this.firstName = Name;
+        this.surname = Surname;
         this.email = email;
+        this.emp_address = address;
         this.department = department;
-        this.phoneNumber = phoneNumber;
+        
     }
 
     public Employee()
@@ -43,23 +46,23 @@ public class Employee {
 
 
     //getting the first name
-    public String getFirstName() {
+    public String getName() {
         return firstName;
     }
 
     //set the first name
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String Name) {
+        this.firstName = Name;
     }
 
     //getting the last name
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
     //set the last name
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String Surname) {
+        this.surname = Surname;
     }
 
     //getting the email
@@ -82,13 +85,23 @@ public class Employee {
         this.department = department;
     }
 
-    //getting the phone number
-    public String getPhoneNumber() {
-        return phoneNumber;
+    //getting the address
+   public String getAddress() {
+        return emp_address;
+    }
+    //set the address
+    public void setAddress(String address) {
+        this.emp_address = address;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    //getting the employee number
+    public String getEmployeeNumber() {
+        return emp_num;
+    }
+
+    //set the employee number
+    public void setEmployeeNumber(String employeeNumber) {
+        this.emp_num = employeeNumber;
     }
 
 }
