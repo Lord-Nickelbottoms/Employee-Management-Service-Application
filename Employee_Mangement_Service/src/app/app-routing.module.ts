@@ -11,11 +11,11 @@ import { CreateInsertComponent } from './pages/create-insert/create-insert.compo
 import { ViewAllEmpComponent } from './pages/view-all-emp/view-all-emp.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  { path: 'pages/create-insert', component: CreateInsertComponent},
-  { path: "pages/view-all-emp", component: ViewAllEmpComponent},
-  { path: "pages/view-single-emp", component: ViewSingleEmpComponent},
-  { path: "pages/edit", component: EditComponent}
+  { path:"", component:HomeComponent },
+  { path: "pages/create-insert", component: CreateInsertComponent },
+  { path: "pages/view-all-emp", component: ViewAllEmpComponent },
+  { path: "pages/view-single-emp", component: ViewSingleEmpComponent },
+  { path: "pages/edit", component: EditComponent }
 ];
 
 @NgModule({

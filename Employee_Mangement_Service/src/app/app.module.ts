@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// import { FormsModule } from "@angular/forms";
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -11,6 +13,7 @@ import { ViewSingleEmpComponent } from './pages/view-single-emp/view-single-emp.
 import { EditComponent } from './pages/edit/edit.component';
 import { ViewAllEmpComponent } from './pages/view-all-emp/view-all-emp.component';
 import { WelcomeadminComponent } from './component/welcomeadmin/welcomeadmin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { WelcomeadminComponent } from './component/welcomeadmin/welcomeadmin.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
