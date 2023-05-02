@@ -1,0 +1,26 @@
+.footer-structure{
+    padding:50px 0;
+    background-color:#003049;
+  }
+  
+  .footer-structure .item {
+    text-align:center;
+  }
+ 
+  .footer-structure .item > a {
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1.5px #EAE2B7;
+    margin:8px;
+    
+  }
+  
+  .footer-structure .copyright {
+    text-align:center;
+    font-size:16px;
+    color: #EAE2B7;
+  }

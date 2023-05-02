@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --indanthrone: #003049;
+    --redwood: #D62828;
+    --orange: #F77F00;
+    --caramel: #FCBF49;
+    --ivory: #EAE2B7;
+}
+
+*{
+    box-sizing: border-box;
+    background-color: #003049;
+    color: #EAE2B7;
+    font-family: quicksand;
+    padding: 0;
+    margin: 0;
+}

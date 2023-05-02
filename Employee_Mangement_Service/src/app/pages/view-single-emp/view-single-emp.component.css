@@ -1,0 +1,140 @@
+h1{
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details label{
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.buttons button{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.button-1 {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-1:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .button-1:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-1 {
+      padding: 13px 50px 13px;
+    }
+  }
+  
+  /* CSS */
+  .button-2 {
+      font-size: 14px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      outline: 0;
+      border: 1px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+  
+    .button-2:after {
+      content: "";
+      background-color: #cc0c0c;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+  
+    .button-2:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+
+    .button-3 {
+      font-size: 14px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      outline: 0;
+      border: 1px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button-3:after {
+      content: "";
+      background-color: green;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+    
+    .button-3:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+  
+    @media (min-width: 768px) {
+      .button-2 {
+        padding: 13px 50px 13px;
+      }
+    }
+  

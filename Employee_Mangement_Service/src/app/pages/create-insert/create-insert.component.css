@@ -1,0 +1,93 @@
+:root{
+    --indanthrone: #003049;
+    --redwood: #D62828;
+    --orange: #F77F00;
+    --caramel: #FCBF49;
+    --ivory: #EAE2B7;
+}
+
+*{
+    box-sizing: border-box;
+    background-color: #003049;
+    color: #EAE2B7;
+}
+
+html{
+    width: 100%;
+}
+
+
+
+.heading{
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.create_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 70%;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.input-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label{
+    font-size: 1.8rem;
+}
+
+.input-container input{
+    padding: 15px 10px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid #FCBF49;
+}
+
+.input-container #address{
+    border-radius: 10px;
+    padding: 15px 15px;
+    font-size: 24px;
+    border: 1px solid #FCBF49;
+}
+
+.input-container select{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid #FCBF49;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button button{
+    font-size: 1.5rem;
+    border: 1px solid #FCBF49;
+    border-radius: 10px;
+    margin-right: 1.6rem;
+    margin-top: 1.4rem;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background-color: #F77F00;
+    color: #003049;
+    border: 1px solid #F77F00;
+}

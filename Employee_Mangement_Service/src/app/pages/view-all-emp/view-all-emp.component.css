@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button{
+    font-size: 1.5rem;
+    border: 1px solid #FCBF49;
+    border-radius: 10px;
+    margin-left: 2.5rem;
+    margin-top: 2.5rem;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+
+button:hover{
+  background-color: #F77F00;
+  color: #003049;
+  border: 1px solid #F77F00;
+}
