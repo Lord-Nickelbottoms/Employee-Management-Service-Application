@@ -22,17 +22,17 @@ export class ViewAllEmpComponent implements OnInit{
   private getEmployees(){
     this.employeeService.getEmployeeList().subscribe(data=> {
       this.employees = data;
-      console.log(this.employees)
+      console.log(data)
     });
   }
 
   employeeDetails(id: number){
-    this.router.navigate(['employee-details', id]);
+    this.router.navigate(['view-single-emp', id]);
   }
 
-  updateEmployee(id: number){
-    this.router.navigate(['update-employee', id]);
-  }
+  // updateEmployee(id: number){
+  //   this.router.navigate(['update-employee', id]);
+  // }
 
   // deleteEmployee(id: number){
   //   this.employeeService.deleteEmployee(id).subscribe( data => {

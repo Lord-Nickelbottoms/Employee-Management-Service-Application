@@ -8,27 +8,32 @@ import { Employee } from '../employee';
 })
 export class EmployeeServiceService {
 
-  private url = 'https://a05e-154-0-10-27.in.ngrok.io/';
+
+  private url = 'http://localhost:8080/employees';
 
   constructor(private httpClient: HttpClient) {}
 
-  getEmployeeList(): Observable<Employee[]>{
-    return this.httpClient.get<Employee[]>(`${this.url}`);  //returns all employees
+  getEmployeeList(){
+    return this.httpClient.get('http://localhost:8080/employees')
   }
 
-  createEmployee(employee: Employee): Observable<Object>{
-    return this.httpClient.post(`${this.url}`, employee); //creates a new employee
+  getEmployeeById(id: number){
+    return this.httpClient.get(`http://localhost:8080/employees/${id}`)
   }
 
-  getEmployeeById(id: number): Observable<Employee>{
-    return this.httpClient.get<Employee>(`${this.url}/${id}`); //returns a single employee
-  }
+  // createEmployee(employee: Employee): Observable<Object>{
+  //   return this.httpClient.post(`${this.url}`, employee); //creates a new employee
+  // }
 
-  updateEmployee(id: number, employee: Employee): Observable<Object>{
-    return this.httpClient.put(`${this.url}/${id}`, employee);
-  }
+  // getEmployeeById(id: number): Observable<Employee>{
+  //   return this.httpClient.get<Employee>(`${this.url}/${id}`); //returns a single employee
+  // }
 
-  deleteEmployee(id: number): Observable<Object>{
-    return this.httpClient.delete(`${this.url}/${id}`);
-  }
+  // updateEmployee(id: number, employee: Employee): Observable<Object>{
+  //   return this.httpClient.put(`${this.url}/${id}`, employee);
+  // }
+
+  // deleteEmployee(id: number): Observable<Object>{
+  //   return this.httpClient.delete(`${this.url}/${id}`);
+  // }
 }

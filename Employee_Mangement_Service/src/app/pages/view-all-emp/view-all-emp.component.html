@@ -13,13 +13,13 @@
         <th> </th>
     </tr>
 
-    <tr *ngFor="let item of employees">
-        <td>{{ employees.employeeNumber}}</td>
-        <td>{{ employees.firstName }}</td>
-        <td>{{ employees.surname }}</td>
-        <td>{{ employees.email }}</td>
-        <td>{{ employees.address}}</td>
-        <td>{{ employees.department}}</td>
+    <tr *ngFor="let item of employees; let i = index">
+        <td>{{ employees[i].employee_number }}</td>
+        <td>{{ employees[i].firstname }}</td>
+        <td>{{ employees[i].surname }}</td>
+        <td>{{ employees[i].email }}</td>
+        <td>{{ employees[i].address }}</td>
+        <td>{{ employees[i].department }}</td>
         <td><button routerLink="/pages/view-single-emp">View Details</button></td>
     </tr>
     <!-- <tr>

@@ -17,27 +17,27 @@ export class CreateInsertComponent implements OnInit {
 
   ngOnInit(): void {
     // let firstName : string = <HTMLInputElement>document.getElementById("firstName").value;
-    let firstName = document.getElementById('firstName') as HTMLInputElement | null;
-    let surname = document.getElementById('lastName') as HTMLInputElement | null;
-    let email = document.getElementById('emp_email') as HTMLInputElement | null;
-    let address = document.getElementById('address') as HTMLInputElement | null;
+    let firstName = document.getElementById('firstName') as HTMLInputElement["value"] | null;
+    let surname = document.getElementById('lastName') as HTMLInputElement["value"] | null;
+    let email = document.getElementById('emp_email') as HTMLInputElement["value"] | null;
+    let address = document.getElementById('address') as HTMLInputElement["value"] | null;
     let department = (<HTMLSelectElement>document.getElementById('department')).value;
   }
 
-  saveEmployee(){
-    this.employeeService.createEmployee(this.employee).subscribe( data =>{
-      console.log(data);
-      this.goToEmployeeList();
-    },
-    error => console.log(error));
-  }
+  // saveEmployee(){
+  //   this.employeeService.createEmployee(this.employee).subscribe( data =>{
+  //     console.log(data);
+  //     this.goToEmployeeList();
+  //   },
+  //   error => console.log(error));
+  // }
 
   goToEmployeeList(){
     this.router.navigate(['../view-all-emp/view-all-emp.component.html']);
   }
   
-  onSubmit(){
-    console.log(this.employee);
-    this.saveEmployee();
-  }
+  // onSubmit(){
+  //   console.log(this.employee);
+  //   this.saveEmployee();
+  // }
 }

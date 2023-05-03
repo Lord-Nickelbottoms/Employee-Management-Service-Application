@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeServiceService } from 'src/app/services/employee-service.service';
 
 @Component({
   selector: 'app-view-single-emp',
@@ -6,9 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-single-emp.component.css']
 })
 export class ViewSingleEmpComponent {
+
+  // employee: any;
+
+  // constructor(private employeeService: EmployeeServiceService, private router: Router){}
+
   clickMethod(name: string) {
     if(confirm("Are you sure to delete this user?")) {
       console.log("Implement delete functionality here");
     }
   }
+
+  // ngOnInit(): void{
+  //   this.getEmployeeById();
+  // }
+
+  // getEmployeeById(id: number): void{
+  // }
 }
