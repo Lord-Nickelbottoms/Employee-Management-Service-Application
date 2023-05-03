@@ -25,7 +25,7 @@ export class EmployeeServiceService {
     return this.httpClient.post(`${this.url}`, employee); //creates a new employee
   }
 
-  EditEmployee(employee:Employee){
+  EditEmployee(employee:Employee):Observable<Employee>{
   return this.httpClient.put<Employee>(`${this.url}/${employee.employeeNumber}`,employee);
   }
 
