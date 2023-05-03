@@ -11,6 +11,8 @@
         <th>Employee Address</th>
         <th>Department</th>
         <th> </th>
+        <th> </th>
+
     </tr>
 
     <tr *ngFor="let item of employees; let i = index">
@@ -20,7 +22,9 @@
         <td>{{ employees[i].email }}</td>
         <td>{{ employees[i].address }}</td>
         <td>{{ employees[i].department }}</td>
-        <td><button routerLink="/pages/view-single-emp">View Details</button></td>
+        <td><button routerLink="/pages/edit">Edit</button></td>
+        <td><button routerLink="ages/view-all-emp">Delete</button></td>
+
     </tr>
     <!-- <tr>
         <td>03449</td>
