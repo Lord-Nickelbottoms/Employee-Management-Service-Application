@@ -9,7 +9,7 @@ import { Employee } from '../employee';
 export class EmployeeServiceService {
 
 
-  private url = 'http://localhost:8080/employees';
+  public url = 'http://localhost:8080/employees';
 
   constructor(private httpClient: HttpClient) {}
 

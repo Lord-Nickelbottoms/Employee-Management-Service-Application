@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Employee } from 'src/app/employee';
 import { EmployeeServiceService } from 'src/app/services/employee-service.service';
 
 @Component({
@@ -7,7 +9,6 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
   styleUrls: ['./view-single-emp.component.css']
 })
 export class ViewSingleEmpComponent {
-
   // employee: any;
 
   // constructor(private employeeService: EmployeeServiceService, private router: Router){}
@@ -22,6 +23,6 @@ export class ViewSingleEmpComponent {
   //   this.getEmployeeById();
   // }
 
-  // getEmployeeById(id: number): void{
+  // getEmployeeById(id: number): Observable<Employee>{
   // }
 }
