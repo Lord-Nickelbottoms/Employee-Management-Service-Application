@@ -2,6 +2,8 @@
 
 <h1>View All Employees</h1>
 
+<input type="text" id="search" onkeyup="searchFunction()" placeholder="Search employees" title="Type in name">
+
 <table>
     <tr>
         <th>Employee Number</th>
@@ -69,6 +71,34 @@
    
 
 </table>
+
+<script>
+    function searchFunction()
+    {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUppperCase();
+        table = document.getElementById("employees")
+        tr = table.getElementsByTagName("tr");
+        for (i =0; i < tr.length; i++)
+        {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) 
+            {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUppperCase().indexOf(filter) > -1) 
+                {
+                    tr[i].style.display = "";
+                }
+                else 
+                {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
 <br>
 <br>
 <br>

@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
-<form class="create_container" method="post">
+<!-- <form class="create_container" method="post" > -->
 
     <h2 class="heading">Create/Insert Employee</h2>
 
-    <form action="">
+    <form [formGroup]="newEmployeeForm" (ngSubmit)="onSubmit()">
 
         <!-- <div class="input-container">
                 <label for="empNum">Employee Number: </label>
@@ -13,15 +13,15 @@
 
 
         <div class="input-container">
-            <label for="firstName">Name: </label>
-            <input type="text" id="firstName" name="firstName" required placeholder="John">
+            <label for="firstname">Name: </label>
+            <input type="text" id="firstname" formControlName="firstname" required placeholder="John">
         </div>
 
 
 
         <div class="input-container">
-            <label for="lastName">Surname: </label>
-            <input type="text" id="lastName" name="lastName" required placeholder="Appleseed">
+            <label for="surname">Surname: </label>
+            <input type="text" id="surname" formControlName="surname" required placeholder="Appleseed">
         </div>
 
 
@@ -29,7 +29,7 @@
 
         <div class="input-container">
             <label for="emp_email">Employee Email: </label>
-            <input type="" id="emp_email" name="emp_email" required placeholder="John.Appleseed@digitalacademy.co.za">
+            <input type="email" id="email" formControlName="email" required placeholder="John.Appleseed@digitalacademy.co.za">
         </div>
 
 
@@ -37,7 +37,7 @@
         <div class="input-container">
             <label for="address">Employee Address: </label>
             <!-- <input type="text" id="address" name="address" required> -->
-            <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            <textarea formControlName="address" id="address" cols="30" rows="10"></textarea>
         </div>
 
 
@@ -46,7 +46,7 @@
 
             <label for="department">Department: </label>
 
-            <select name="department" id="department" required>
+            <select formControlName="department" id="department" required>
 
                 <option value="human-resources">Human Resources</option>
                 <option value="IT">IT</option>
@@ -56,12 +56,14 @@
         </div>
 
 
+        <!-- <div class="button">
+            <button (click)="saveEmployee()">Insert Employee</button>
+        </div> -->
         <div class="button">
-            <!-- <button (click)="saveEmployee()">Insert Employee</button> -->
+            <button type="submit" [disabled]="!newEmployeeForm.valid">Register</button>
         </div>
-        
     </form>
-</form>
+<!-- </form> -->
 <br>
 <app-footer></app-footer>
 

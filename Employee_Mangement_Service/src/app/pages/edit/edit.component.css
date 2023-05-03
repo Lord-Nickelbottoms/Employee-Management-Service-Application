@@ -46,7 +46,24 @@ body{
 
 input[type=text]{
 
-    color:#003049;
+    color:#eae2b7;
+    width: 50%;
+    padding: 18px 26px;
+    margin: 8px 0;
+    display: grid;
+    border: 1px solid #fcbf49;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color:#003049;
+    top: 50%;
+    left: 50%;
+    font-size: 1.3rem;
+
+      }
+
+input[type=email]{
+
+    color:#eae2b7;
     width: 50%;
     padding: 18px 26px;
     margin: 8px 0;

@@ -26,9 +26,9 @@ export class ViewAllEmpComponent implements OnInit{
     });
   }
 
-  employeeDetails(id: number){
-    this.router.navigate(['view-single-emp', id]);
-  }
+  // employeeDetails(id: number){
+  //   this.router.navigate(['view-single-emp', id]);
+  // }
 
   // updateEmployee(id: number){
   //   this.router.navigate(['update-employee', id]);

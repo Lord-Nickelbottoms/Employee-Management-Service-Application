@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/employee';
 import { EmployeeServiceService } from 'src/app/services/employee-service.service';
+
 
 @Component({
   selector: 'app-create-insert',
@@ -12,32 +14,35 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
 export class CreateInsertComponent implements OnInit {
   // employee: Employee = new Employee();
   employee: any;
-  constructor(private employeeService: EmployeeServiceService,
-    private router: Router) { }
+   newEmployeeForm!: FormGroup;
+
+  constructor(private employeeService: EmployeeServiceService, private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    // let firstName : string = <HTMLInputElement>document.getElementById("firstName").value;
-    let firstName = document.getElementById('firstName') as HTMLInputElement["value"] | null;
-    let surname = document.getElementById('lastName') as HTMLInputElement["value"] | null;
-    let email = document.getElementById('emp_email') as HTMLInputElement["value"] | null;
-    let address = document.getElementById('address') as HTMLInputElement["value"] | null;
-    let department = (<HTMLSelectElement>document.getElementById('department')).value;
+    this.newEmployeeForm = this.fb.group({
+      firstname: ['', Validators.required],
+      surname: ['', Validators.required],
+      email: ['', Validators.required],
+      address: ['', Validators.required],
+      department: ['', Validators.required]
+    })
   }
 
-  // saveEmployee(){
-  //   this.employeeService.createEmployee(this.employee).subscribe( data =>{
-  //     console.log(data);
-  //     this.goToEmployeeList();
-  //   },
-  //   error => console.log(error));
-  // }
+ 
 
   goToEmployeeList(){
-    this.router.navigate(['../view-all-emp/view-all-emp.component.html']);
+    this.router.navigate(['/pages/view-all-emp']);
   }
   
-  // onSubmit(){
-  //   console.log(this.employee);
-  //   this.saveEmployee();
-  // }
+  onSubmit(){
+
+    this.employeeService.createEmployee(this.newEmployeeForm.value).subscribe( data =>
+      {
+        console.log(data);
+      alert("New employee has been created.")
+      this.goToEmployeeList();
+      });
+
+  
+  }
 }
