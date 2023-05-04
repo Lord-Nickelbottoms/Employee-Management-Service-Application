@@ -16,7 +16,7 @@
 
     </tr>
 
-    <tr *ngFor="let item of employees | filter: filterTerm; let i = index">
+    <!-- <tr *ngFor="let item of employees | filter: filterTerm; let i = index">
         <td>{{ employees[i].employee_number }}</td>
         <td>{{ employees[i].firstname }}</td>
         <td>{{ employees[i].surname }}</td>
@@ -26,7 +26,7 @@
         <td><button routerLink="/pages/edit" (click)="setEmployeeDetails(employees[i].employee_number, employees[i].firstname, employees[i].surname, employees[i].email, employees[i].address, employees[i].department)">Edit</button>
              <button routerLink="/pages/view-all-emp" (click)="deleteEmployee(employees[i].employee_number)">Delete</button></td>
 
-    </tr>
+    </tr> -->
     <!-- <tr>
         <td>03449</td>
         <td>Nizaam </td>
