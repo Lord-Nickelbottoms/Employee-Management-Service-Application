@@ -27,7 +27,7 @@ export class EmployeeServiceService {
 
   EditEmployee(value:any, id:any){
   // return this.httpClient.put(this.url+ "/{id}" + id, value);
-  return this.httpClient.put(`${this.url}/${id}`, value);
+  return this.httpClient.put(this.url + "/" + id, value);
   }
 
 

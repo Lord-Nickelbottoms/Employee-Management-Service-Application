@@ -31,7 +31,7 @@ export class EditComponent implements OnInit {
 
   async  onSubmit(){
     
-      this.employeeService.EditEmployee((this.editEmployeeForm.value), this.employee_number).subscribe(res =>{
+      this.employeeService.EditEmployee(this.editEmployeeForm.value, localStorage.getItem('id')).subscribe(res =>{
         console.log(res);
       })
   

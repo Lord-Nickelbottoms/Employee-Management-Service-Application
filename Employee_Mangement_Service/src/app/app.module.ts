@@ -1,8 +1,10 @@
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//import { FilterPipe } from './pages/view-all-emp/filter.pipe';
 
-import { ReactiveFormsModule } from '@angular/forms';
-// import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,13 +29,16 @@ import { HttpClientModule } from '@angular/common/http';
     EditComponent,
     ViewAllEmpComponent,
     WelcomeadminComponent,
+    //FilterPipe
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
-    // FormsModule
+    Ng2SearchPipeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

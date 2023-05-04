@@ -11,6 +11,7 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
   styleUrls: ['./view-all-emp.component.css']
 })
 export class ViewAllEmpComponent implements OnInit{
+  filterTerm = '';
   employees: any;
 
   constructor(private employeeService: EmployeeServiceService, private router: Router){}
@@ -24,6 +25,10 @@ export class ViewAllEmpComponent implements OnInit{
       this.employees = data;
       console.log(data)
     });
+  }
+
+  public setEmployeeId(id:any){
+    localStorage.setItem('id', id);
   }
 
   // employeeDetails(id: number){

@@ -2,7 +2,7 @@
 
 <h1>View All Employees</h1>
 
-<input type="text" id="search" onkeyup="searchFunction()" placeholder="Search employees" title="Type in name">
+<input type="text" class="form-control" placeholder="Search" [(ngModel)]="filterTerm"/>
 
 <table>
     <tr>
@@ -16,14 +16,14 @@
 
     </tr>
 
-    <tr *ngFor="let item of employees; let i = index">
+    <tr *ngFor="let item of employees | filter: filterTerm; let i = index">
         <td>{{ employees[i].employee_number }}</td>
         <td>{{ employees[i].firstname }}</td>
         <td>{{ employees[i].surname }}</td>
         <td>{{ employees[i].email }}</td>
         <td>{{ employees[i].address }}</td>
         <td>{{ employees[i].department }}</td>
-        <td><button routerLink="/pages/edit">Edit</button> <button routerLink="/pages/view-all-emp">Delete</button></td>
+        <td><button routerLink="/pages/edit" (click)="setEmployeeId(employees[i].employee_number)">Edit</button> <button routerLink="/pages/view-all-emp">Delete</button></td>
 
     </tr>
     <!-- <tr>
@@ -72,32 +72,7 @@
 
 </table>
 
-<script>
-    function searchFunction()
-    {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("search");
-        filter = input.value.toUppperCase();
-        table = document.getElementById("employees")
-        tr = table.getElementsByTagName("tr");
-        for (i =0; i < tr.length; i++)
-        {
-            td = tr[i].getElementsByTagName("td")[1];
-            if (td) 
-            {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUppperCase().indexOf(filter) > -1) 
-                {
-                    tr[i].style.display = "";
-                }
-                else 
-                {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-</script>
+
 
 <br>
 <br>
