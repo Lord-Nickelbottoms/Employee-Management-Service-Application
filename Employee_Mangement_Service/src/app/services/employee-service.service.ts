@@ -17,7 +17,7 @@ export class EmployeeServiceService {
     return this.httpClient.get('http://localhost:8080/employees')
   }
 
-  getEmployeeById(id: number): Observable < any [] >{
+  getEmployeeById(id: any): Observable < any [] >{
     return this.httpClient.get<any>(`${this.url}/${id}`)
   }
 
