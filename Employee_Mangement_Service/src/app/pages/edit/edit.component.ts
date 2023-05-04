@@ -13,32 +13,58 @@ export class EditComponent implements OnInit {
   employee: any;
   editEmployeeForm!: FormGroup;
 
-  constructor(private employeeService: EmployeeServiceService, private router:Router,private route: ActivatedRoute,  private fb: FormBuilder) {}
+  constructor(private employeeService: EmployeeServiceService, private router:Router, private fb: FormBuilder) {}
+ 
+ 
+    employee_number = localStorage.getItem('employee_number');
 
   ngOnInit(): void {
     this.editEmployeeForm = this.fb.group({
-      employee_number:['',Validators.required],
       firstname: ['', Validators.required],
       surname: ['', Validators.required],
       email: ['', Validators.required],
       address: ['', Validators.required],
       department: ['', Validators.required]
     })
+  }
+
+
+  async  onSubmit(){
     
-  }
+      this.employeeService.EditEmployee((this.editEmployeeForm.value), this.employee_number).subscribe(res =>{})
+  
+}
+ 
 
-  private getEmployeesById(id:number){
-    this.employeeService.getEmployeeList().subscribe(data=> {
-      this.employee = data;
-      console.log(data)
-    });
-  }
 
-  onSubmit()
-  {
-     this.employeeService.EditEmployee(this.employee).subscribe(()=>this.router.navigate(['/employees']));
 
-  }
+
+
+
+  // ngOnInit(): void {
+  //   this.editEmployeeForm = this.fb.group({
+  //     employee_number:['',Validators.required],
+  //     firstname: ['', Validators.required],
+  //     surname: ['', Validators.required],
+  //     email: ['', Validators.required],
+  //     address: ['', Validators.required],
+  //     department: ['', Validators.required]
+  //   })
+    
+  // }
+
+  // private getEmployeesById(id:number){
+  //   this.employeeService.getEmployeeList().subscribe(data=> {
+  //     this.employee = data;
+  //     console.log(data)
+  //   });
+  // }
+
+  // onSubmit()
+  // {
+  //    this.employeeService.EditEmployee(this.employee).subscribe(()=>this.router.navigate(['/employees']));
+
+  // }
 
   // editEmployee(value: any){
   //   let body = {

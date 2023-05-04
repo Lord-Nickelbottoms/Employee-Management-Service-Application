@@ -17,17 +17,20 @@ export class EmployeeServiceService {
     return this.httpClient.get('http://localhost:8080/employees')
   }
 
-  getEmployeeById(id: number){
-    return this.httpClient.get(`http://localhost:8080/employees/${id}`)
+  getEmployeeById(id: number): Observable < any [] >{
+    return this.httpClient.get<any>(this.url+`employees/${id}`)
   }
 
   createEmployee(employee: Employee){
     return this.httpClient.post(`${this.url}`, employee); //creates a new employee
   }
 
-  EditEmployee(employee:Employee):Observable<Employee>{
-  return this.httpClient.put<Employee>(`${this.url}/${employee.employeeNumber}`,employee);
+  EditEmployee(value:any, id:any){
+  return this.httpClient.put(this.url+ "employees/" + id,value);
   }
+
+
+
 
   // editEmployee(data: any, id: string): Observable<any>{
   //   return this.httpClient.patch(`${this.url}/${id}`, data);
