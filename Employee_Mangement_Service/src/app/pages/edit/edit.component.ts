@@ -32,6 +32,7 @@ export class EditComponent implements OnInit {
     
       this.employeeService.EditEmployee(this.editEmployeeForm.value, localStorage.getItem('id')).subscribe(res =>{
         console.log(res);
+        // this.router.navigate(["/pages/view-all-emp"]);
       })
   
 }
