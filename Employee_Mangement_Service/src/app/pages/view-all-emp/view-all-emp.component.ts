@@ -27,9 +27,21 @@ export class ViewAllEmpComponent implements OnInit{
     });
   }
 
-  public setEmployeeId(id:any){
-    localStorage.setItem('id', id);
+  // public setEmployeeId(id:any){
+  //   localStorage.setItem('id', id);
+  // }
+
+  setEmployeeDetails(id:any, firstname:string,surname:string,email:string,address:string,department:string)
+  {
+    localStorage.setItem('id',id)
+    localStorage.setItem('firstName', firstname);
+    localStorage.setItem('surname',surname);
+    localStorage.setItem('email',email);
+    localStorage.setItem('address', address);
+    localStorage.setItem('department', department)
   }
+
+  
 
   // employeeDetails(id: number){
   //   this.router.navigate(['view-single-emp', id]);

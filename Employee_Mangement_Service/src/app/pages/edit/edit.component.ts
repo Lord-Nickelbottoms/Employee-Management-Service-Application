@@ -15,16 +15,14 @@ export class EditComponent implements OnInit {
 
   constructor(private employeeService: EmployeeServiceService, private router:Router, private fb: FormBuilder) {}
  
- 
-    employee_number = localStorage.getItem('employee_number');
 
   ngOnInit(): void {
     this.editEmployeeForm = this.fb.group({
-      firstname: ['', Validators.required],
-      surname: ['', Validators.required],
-      email: ['', Validators.required],
-      address: ['', Validators.required],
-      department: ['', Validators.required]
+      firstname: [localStorage.getItem('firstName'), Validators.required],
+      surname: [localStorage.getItem('surname'), Validators.required],
+      email: [localStorage.getItem('email'), Validators.required],
+      address: [localStorage.getItem('address'), Validators.required],
+      department: [localStorage.getItem('department'), Validators.required]
     })
   }
 
