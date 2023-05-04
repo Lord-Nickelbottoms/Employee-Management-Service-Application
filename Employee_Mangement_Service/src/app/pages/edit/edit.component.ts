@@ -24,6 +24,7 @@ export class EditComponent implements OnInit {
       address: [localStorage.getItem('address'), Validators.required],
       department: [localStorage.getItem('department'), Validators.required]
     })
+    console.log(this.editEmployeeForm.value)
   }
 
 

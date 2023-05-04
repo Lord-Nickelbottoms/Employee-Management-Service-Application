@@ -31,6 +31,11 @@ export class EmployeeServiceService {
   }
 
 
+  deleteEmployee(id: any){
+    return this.httpClient.delete(this.url +"/" +id);
+  }
+
+
 
 
   // editEmployee(data: any, id: string): Observable<any>{
@@ -47,7 +52,4 @@ export class EmployeeServiceService {
   //   return this.httpClient.put(`${this.url}/${id}`, employee);
   // }
 
-  // deleteEmployee(id: number): Observable<Object>{
-  //   return this.httpClient.delete(`${this.url}/${id}`);
-  // }
 }

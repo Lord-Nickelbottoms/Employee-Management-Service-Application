@@ -51,10 +51,15 @@ export class ViewAllEmpComponent implements OnInit{
   //   this.router.navigate(['update-employee', id]);
   // }
 
-  // deleteEmployee(id: number){
-  //   this.employeeService.deleteEmployee(id).subscribe( data => {
-  //     console.log(data);
-  //     this.getEmployees();
-  //   })
-  // }
+  deleteEmployee(id: number){
+
+    if (confirm("Do you want to delete this Employee?") == true) {
+      this.employeeService.deleteEmployee(id).subscribe( data => {
+        console.log(data);
+        this.getEmployees();
+      })
+    } else {
+      console.log("You canceled!");
+    }
+  }
 }

@@ -23,7 +23,8 @@
         <td>{{ employees[i].email }}</td>
         <td>{{ employees[i].address }}</td>
         <td>{{ employees[i].department }}</td>
-        <td><button routerLink="/pages/edit" (click)="setEmployeeDetails(employees[i].employee_number, employees[i].firstname, employees[i].surname, employees[i].email, employees[i].address, employees[i].department)">Edit</button> <button routerLink="/pages/view-all-emp">Delete</button></td>
+        <td><button routerLink="/pages/edit" (click)="setEmployeeDetails(employees[i].employee_number, employees[i].firstname, employees[i].surname, employees[i].email, employees[i].address, employees[i].department)">Edit</button>
+             <button routerLink="/pages/view-all-emp" (click)="deleteEmployee(employees[i].employee_number)">Delete</button></td>
 
     </tr>
     <!-- <tr>
