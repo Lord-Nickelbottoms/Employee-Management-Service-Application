@@ -13,6 +13,7 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
 export class ViewSingleEmpComponent {
   employees: any;
   private url = 'http://localhost:8080/employees';
+//employeeDelete: string;
 
   constructor(private employeeService: EmployeeServiceService, private router: Router, private http: HttpClient){}
 
@@ -20,7 +21,10 @@ export class ViewSingleEmpComponent {
     if(confirm("Are you sure to delete this user?")) {
       console.log("Implement delete functionality here");
     }
+
   }
+
+
 
   ngOnInit(): void{
     this.getEmployeeById(this.employees);

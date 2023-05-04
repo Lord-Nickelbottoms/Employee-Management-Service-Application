@@ -12,7 +12,10 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
   styleUrls: ['./view-all-emp.component.css']
 })
 export class ViewAllEmpComponent implements OnInit{
+
   employees: any;
+  EmployeeServiceService: any;
+  private deleteId :number | undefined;
 
   constructor(private employeeService: EmployeeServiceService, private router: Router){}
 
@@ -27,13 +30,30 @@ export class ViewAllEmpComponent implements OnInit{
     });
   }
 
-  onDelete(identityNumber: number) {
-    this.employeeService.deleteEmployee(identityNumber).subscribe(() => {
-      // Handle success here
-    }, error => {
-      // Handle error here
+  openDelete(employee : Employee){
+    this.deleteId=employee.employeeNumber;
+    this.EmployeeServiceService.open(employee , Employee, {
+      backdrop: 'static'
     });
-  }
+
+    clickMethod()
+
+      this.EmployeeServiceService.delete(this.deleteId).subscribe(()=> {
+        this.ngOnInit();
+        this.EmployeeServiceService.close();
+      });
+    }
+    }
+
+
+    //employee: Employee, backdrop: any, arg2: string, size: any, arg4: string): void
+  // onDelete(identityNumber: number) {
+  //   this.employeeService.deleteEmployee(identityNumber).subscribe(() => {
+  //     // Handle success here
+  //   }, error => {
+  //     // Handle error here
+  //   });
+  // }
 
 
   // employeeDetails(id: number){
@@ -50,4 +70,8 @@ export class ViewAllEmpComponent implements OnInit{
   //     this.getEmployees();
   //   })
   // }
+
+function clickMethod() {
+  throw new Error('Function not implemented.');
 }
+

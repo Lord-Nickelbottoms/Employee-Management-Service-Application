@@ -24,7 +24,10 @@
         <td>{{ employees[i].address }}</td>
         <td>{{ employees[i].department }}</td>
         <!-- <td><button routerLink="/pages/edit">Edit</button> <button (click)="onDelete(identityNumber)" routerLink="/pages/view-all-emp">Delete</button></td> -->
-        <td><button routerLink="/pages/edit">Edit</button> <button (click)="onDelete(employees[i].employee_number)">Delete</button></td>
+        <!-- <td><button routerLink="/pages/edit">Edit</button> <button (click)="onDelete(employees[i].employee_number)">Delete</button></td> -->
+          <td><button routerLink="/pages/edit">Edit</button>
+            
+            <button  (click)="openDelete(employees)">Delete</button></td>
     </tr>
     <!-- <tr>
         <td>03449</td>

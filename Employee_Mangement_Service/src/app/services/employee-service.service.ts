@@ -7,6 +7,9 @@ import { Employee } from '../employee';
   providedIn: 'root'
 })
 export class EmployeeServiceService {
+  open(employee: Employee, backdrop: any, arg2: string, size: any, arg4: string) {
+    throw new Error('Method not implemented.');
+  }
 
 
   private url = 'http://localhost:8080/employees';
@@ -27,7 +30,7 @@ export class EmployeeServiceService {
 
   EditEmployee(value:any, id:any){
   // return this.httpClient.put(this.url+ "/{id}" + id, value);
-  return this.httpClient.put(`${this.url}/${id}`, value);
+  return this.httpClient.put(`${this.url}/${id}` +id, value);
   }
 
 
