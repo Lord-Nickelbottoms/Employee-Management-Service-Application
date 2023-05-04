@@ -26,7 +26,7 @@ export class EmployeeServiceService {
   }
 
   EditEmployee(employee:Employee):Observable<Employee>{
-  return this.httpClient.put<Employee>(`${this.url}/${employee.employeeNumber}`,employee);
+  return this.httpClient.put<Employee>(`${this.url}/${employee.employee_number}`,employee);
   }
 
   // editEmployee(data: any, id: string): Observable<any>{

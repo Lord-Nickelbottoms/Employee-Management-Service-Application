@@ -1,12 +1,12 @@
 export class Employee {
-    employeeNumber: number;
+    employee_number: number;
     firstName: string;
     surname: string;
     email: string;
     department: string;
 
-    constructor(employeeNumber : number, firstName: string, lastName: string, email: string, department: string){
-        this.employeeNumber= employeeNumber;
+    constructor(employee_number : number, firstName: string, lastName: string, email: string, department: string){
+        this.employee_number= employee_number;
         this.firstName = firstName;
         this.surname = lastName;
         this.email = email;

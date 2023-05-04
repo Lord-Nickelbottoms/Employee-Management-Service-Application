@@ -17,7 +17,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.editEmployeeForm = this.fb.group({
-      employee_number:['',Validators.required],
+
       firstname: ['', Validators.required],
       surname: ['', Validators.required],
       email: ['', Validators.required],
