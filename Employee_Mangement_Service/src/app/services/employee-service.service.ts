@@ -18,7 +18,7 @@ export class EmployeeServiceService {
   }
 
   getEmployeeById(id: number): Observable < any [] >{
-    return this.httpClient.get<any>(this.url+`employees/${id}`)
+    return this.httpClient.get<any>(`${this.url}/${id}`)
   }
 
   createEmployee(employee: Employee){
@@ -26,7 +26,8 @@ export class EmployeeServiceService {
   }
 
   EditEmployee(value:any, id:any){
-  return this.httpClient.put(this.url+ "employees/" + id,value);
+  // return this.httpClient.put(this.url+ "/{id}" + id, value);
+  return this.httpClient.put(`${this.url}/${id}`, value);
   }
 
 
