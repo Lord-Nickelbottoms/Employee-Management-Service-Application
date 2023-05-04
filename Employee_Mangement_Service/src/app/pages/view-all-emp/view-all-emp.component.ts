@@ -2,6 +2,7 @@
 // import { any } from '0g';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { Employee } from 'src/app/employee';
 import { EmployeeServiceService } from 'src/app/services/employee-service.service';
 
@@ -25,6 +26,15 @@ export class ViewAllEmpComponent implements OnInit{
       console.log(data)
     });
   }
+
+  onDelete(identityNumber: number) {
+    this.employeeService.deleteEmployee(identityNumber).subscribe(() => {
+      // Handle success here
+    }, error => {
+      // Handle error here
+    });
+  }
+
 
   // employeeDetails(id: number){
   //   this.router.navigate(['view-single-emp', id]);

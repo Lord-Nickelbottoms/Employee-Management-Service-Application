@@ -47,6 +47,11 @@ export class EmployeeServiceService {
   //   return this.httpClient.put(`${this.url}/${id}`, employee);
   // }
 
+
+  deleteEmployee(identityNumber: number) {
+    const url = `${this.url}/${identityNumber}`;
+    return this.httpClient.delete(url);
+  }
   // deleteEmployee(id: number): Observable<Object>{
   //   return this.httpClient.delete(`${this.url}/${id}`);
   // }
