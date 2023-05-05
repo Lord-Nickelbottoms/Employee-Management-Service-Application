@@ -17,6 +17,7 @@ import { EditComponent } from './pages/edit/edit.component';
 import { ViewAllEmpComponent } from './pages/view-all-emp/view-all-emp.component';
 import { WelcomeadminComponent } from './component/welcomeadmin/welcomeadmin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeMessageComponent } from './component/welcome-message/welcome-message.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     EditComponent,
     ViewAllEmpComponent,
     WelcomeadminComponent,
+    WelcomeMessageComponent,
     //FilterPipe
   ],
   

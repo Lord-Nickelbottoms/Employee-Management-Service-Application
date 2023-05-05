@@ -44,7 +44,7 @@ body{
     border-radius: 10px;
 }
 
-input[type=text]{
+input{
 
     color:#eae2b7;
     width: 50%;
@@ -57,11 +57,9 @@ input[type=text]{
     background-color:#003049;
     top: 50%;
     left: 50%;
-    font-size: 1.3rem;
-
-      }
-
-input[type=email]{
+    font-size: 2rem;
+}
+select{
 
     color:#eae2b7;
     width: 50%;
@@ -74,9 +72,33 @@ input[type=email]{
     background-color:#003049;
     top: 50%;
     left: 50%;
-    font-size: 1.3rem;
+    font-size: 2rem;
+}
 
-      }
+select:hover{
+    cursor: pointer;
+}
+
+label{
+    font-size: 1.7rem;
+}
+
+/* input[type=email]{
+
+    color:#eae2b7;
+    width: 50%;
+    padding: 18px 26px;
+    margin: 8px 0;
+    display: grid;
+    border: 1px solid #fcbf49;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color:#003049;
+    top: 50%;
+    left: 50%;
+    font-size: 1.6rem;
+
+      } */
 button{
     font-size: 1.5rem;
     border: 1px solid #FCBF49;
@@ -98,6 +120,11 @@ button{
     align-items: center; */
 }
 
+.btn-back:hover{
+    background-color: #eae2b7;
+    border: 1px solid #eae2b7;
+}
+
 button:hover{
     cursor: pointer;
     background-color: #F77F00;
@@ -110,6 +137,7 @@ h1{
     color: #eae2b7;
     text-align: center;
     width: 50%;
-    padding: 15px;
-    font-size: 3srem;
+    padding: 30px;
+    font-size: 3.5rem;
+    font-weight: 600;
 }

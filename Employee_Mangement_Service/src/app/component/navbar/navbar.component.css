@@ -64,6 +64,11 @@ html {
     width: 100%;
     -webkit-tap-highlight-color: #003049;
 }
+
+nav{
+  border-bottom: 1px solid #EAE2B7;
+}
+
 nav .navbar .navbar-default {
     /* border-bottom: 1px solid #0d0c0c; */
     /* border-bottom: 1px solid white; */
@@ -72,6 +77,11 @@ nav .navbar .navbar-default {
     /* display: inline; */
     padding: 5px;
 
+}
+
+nav img{
+  width: 160px;
+  padding: 15px 5px 15px 10px;
 }
 
 .navbar-header{
@@ -96,15 +106,21 @@ ul{
 }
 li  a {
     display: block;
-    padding: 8px;
+    padding: px;
     background-color: #003049;
     font-size: 1.5rem;
+    transition: 0.2s;
   }
+
+a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
 li{
 
     display: flex;
     float: left;
-    padding: 0x;
+    padding: 12px;
     color : #EAE2B7;
   }
   .home {

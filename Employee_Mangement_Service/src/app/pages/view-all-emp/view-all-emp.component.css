@@ -1,7 +1,8 @@
 h1{
     text-align: center;
-    font-size: 3rem;
-    padding: 20px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding: 30px 20px;
 }
 
 
@@ -17,6 +18,15 @@ td, th {
   padding: 8px;
 }
 
+td{
+  font-size: 20px;
+  background-color: #004063;
+}
+
+th{
+  font-size: 24px;
+}
+
 tr:nth-child(even) {
   background-color: #dddddd;
 }
@@ -30,6 +40,7 @@ button{
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
+    width: 100px;
     
 }
 
@@ -37,4 +48,18 @@ button:hover{
   background-color: #F77F00;
   color: #003049;
   border: 1px solid #F77F00;
+}
+
+.btn-edit:hover{
+  background-color: #FCBF49;
+}
+
+.form-control{
+  background-color: #003049;
+  color: #FCBF49;
+  padding: 15px;
+  font-size: 1.4rem;
+}
+.form-control::placeholder{
+  color: #FCBF49;
 }
