@@ -39,6 +39,7 @@ export class CreateInsertComponent implements OnInit {
     this.employeeService.createEmployee(this.newEmployeeForm.value).subscribe( data =>
       {
         console.log(data);
+
       alert("New employee has been created.")
       this.goToEmployeeList();
       });

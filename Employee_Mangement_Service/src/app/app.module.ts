@@ -18,6 +18,7 @@ import { ViewAllEmpComponent } from './pages/view-all-emp/view-all-emp.component
 import { WelcomeadminComponent } from './component/welcomeadmin/welcomeadmin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeMessageComponent } from './component/welcome-message/welcome-message.component';
+import { SearchComponent } from './component/search/search.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { WelcomeMessageComponent } from './component/welcome-message/welcome-mes
     ViewAllEmpComponent,
     WelcomeadminComponent,
     WelcomeMessageComponent,
+    SearchComponent,
     //FilterPipe
   ],
   

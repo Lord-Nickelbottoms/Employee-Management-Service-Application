@@ -35,6 +35,17 @@ export class EmployeeServiceService {
     return this.httpClient.delete(this.url +"/" +id);
   }
 
+  // getEmployeeByName(name: string): Observable<any []>{
+  //   return this.httpClient.get<any>(`${this.url}/employees/${name}`)
+  // }
+
+
+  
+  // searchEmployees(value:string) : Observable<Employee[]> {
+  //   return this.httpClient.get<Employee[]>(this.url + "/search?value=" + value);
+  
+  // }
+
 
 
 

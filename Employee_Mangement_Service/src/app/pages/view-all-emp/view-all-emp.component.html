@@ -2,7 +2,9 @@
 
 <h1>View All Employees</h1>
 
-<input type="text" class="form-control" placeholder="Search" [(ngModel)]="filterTerm"/>
+<input type="text" class="form-control" placeholder="Search" [(ngModel)]="filterTerm" ((input))="filter()" /> &nbsp;
+<!-- <button (click)="searchEmployees()">submit</button> -->
+
 
 <table>
     <tr>
@@ -15,6 +17,11 @@
         <th>Actions</th>
 
     </tr>
+
+<!-- <ul>
+    <li *ngFor=" let item of employees | filter: filterTerm">{{item.name}}</li>
+</ul><li></li> -->
+
 
     <tr *ngFor="let item of employees | filter: filterTerm; let i = index">
         <td>{{ employees[i].employee_number }}</td>

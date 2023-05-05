@@ -29,7 +29,12 @@
 
         <div class="input-container">
             <label for="emp_email">Employee Email: </label>
-            <input type="email" id="email" formControlName="email" required placeholder="John.Appleseed@digitalacademy.co.za">
+            <input  type="email" id="email" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" formControlName="email" placeholder="John.Appleseed@digitalacademy.co.za">
+            <!-- <div ngIf="newEmployeeForm.get ('email').errors.required">
+                Email is required.
+              </div> -->
+             
+        
         </div>
 
 

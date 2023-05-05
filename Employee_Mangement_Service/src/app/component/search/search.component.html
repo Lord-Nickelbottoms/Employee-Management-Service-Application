@@ -1,0 +1,3 @@
+<input type="text" class="form-control" placeholder="Search" [(ngModel)]="filterTerm"/> 
+
+<div *ngFor="let item of Employee | filter: filterTerm">{{item.email}}</div>

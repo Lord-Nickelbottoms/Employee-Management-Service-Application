@@ -4,6 +4,7 @@ export class Employee {
     surname: string;
     email: string;
     department: string;
+  toLowerCase: any;
 
     constructor(employee_number : number, firstName: string, lastName: string, email: string, department: string){
         this.employee_number= employee_number;
