@@ -97,6 +97,10 @@ nav img{
   color: #EAE2B7;
   transition: width 2s, height 2s, transform 2s;
 }
+
+.navbar-toggler-icon{
+  color: #EAE2B7;
+}
 ul{
   list-style-type: none;
   margin: 0;

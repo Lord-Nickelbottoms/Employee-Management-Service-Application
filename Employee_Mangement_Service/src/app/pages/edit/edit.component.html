@@ -1,13 +1,63 @@
+<app-navbar></app-navbar>
+
 <body>
+
+  <h2 class="heading">Edit Employee</h2>
     <form [formGroup]="editEmployeeForm" class="row" (ngSubmit)=" onSubmit()">
     
+      <div class="input-container">
+        <label for="firstname">Name: </label>
+        <input type="text" id="firstname" formControlName="firstname" required placeholder="John">
+    </div>
+
+
+
+    <div class="input-container">
+        <label for="surname">Surname: </label>
+        <input type="text" id="surname" formControlName="surname" required placeholder="Appleseed">
+    </div>
+
+
     
-        <div class="col">
+
+    <div class="input-container">
+        <label for="emp_email">Employee Email: </label>
+        <input type="email" id="email" formControlName="email" required placeholder="John.Appleseed@digitalacademy.co.za">
+    </div>
+
+
+
+    <div class="input-container">
+        <label for="address">Employee Address: </label>
+        <!-- <input type="text" id="address" name="address" required> -->
+        <textarea formControlName="address" id="address" cols="30" rows="10"></textarea>
+    </div>
+
+
+
+    <div class="input-container">
+
+        <label for="department">Department: </label>
+
+        <select formControlName="department" id="department" required>
+
+            <option value="Human-Resources">Human Resources</option>
+            <option value="IT">IT</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Call-Center">Call Center</option>
+        </select>
+    </div>
+    
+        <!-- <div class="col">
             <h1>Edit Employee Details</h1>
-          <!-- <input type="text" placeholder=" e.g 00745634" label="EmpNumber"> <br> -->
+          
+          <label for="firstname">Name: </label>
           <input type="text" formControlName="firstname"  placeholder="Full Names" label="Name"> <br>
+          <label for="surname">Surname: </label>
           <input type="text" formControlName="surname"  placeholder="Surname" label="Surname"> <br>
+          <label for="email">Email: </label>
           <input type="email" formControlName="email"  placeholder="name@theboringcompany.com" label="Work email"> <br>
+          <label for="address">Address: </label>
           <input type="text" formControlName="address" placeholder="Address" label="Address"> <br>
     
     
@@ -16,24 +66,29 @@
             <label for="Department" id="Department">Department</label>
 
             <select type="text" formControlName="department" required>
-              <option value="human-resources">Human Resources</option>
+              <option value="Human-Resources">Human Resources</option>
               <option value="IT">IT</option>
               <option value="Marketing">Marketing</option>
-              <option value="call-center">Call Center</option>
+              <option value="Call-Center">Call Center</option>
 
           </select> 
     
-          </div>
+          </div> -->
           <br>
     
-          <button type="submit" [disabled]="!editEmployeeForm.valid">Save Changes</button>
+          <div class="button-container">
 
           <button class="btn-back" routerLink="/pages/view-all-emp">Go back to previous page</button>
+          <button type="submit" [disabled]="!editEmployeeForm.valid">Save Changes</button>
+
+
+        </div>
           
     
-        </div>
     
     </form>
     
+
     </body>
     
+    <app-footer></app-footer>

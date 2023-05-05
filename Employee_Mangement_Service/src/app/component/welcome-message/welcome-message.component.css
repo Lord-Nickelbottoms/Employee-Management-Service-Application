@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #004063;
+    background-color: whitesmoke;
 }
 
 .welcome-container{
@@ -16,4 +16,5 @@
 p{
     font-size: 4.5rem;   
     font-weight: bold;
+    color: #003049;
 }

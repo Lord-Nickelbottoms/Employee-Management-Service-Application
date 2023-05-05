@@ -3,6 +3,7 @@ h1{
     font-size: 3.5rem;
     font-weight: 600;
     padding: 30px 20px;
+    color: #003049;
 }
 
 
@@ -13,53 +14,61 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #080808;
   text-align: left;
   padding: 8px;
+  color: #003049;
 }
 
 td{
   font-size: 20px;
-  background-color: #004063;
+  background-color: whitesmoke;
+  color: black;
 }
 
 th{
   font-size: 24px;
+  background-color: rgb(215, 215, 215);
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: rgb(184, 184, 184);
 }
 
 button{
     font-size: 1.5rem;
-    border: 1px solid #FCBF49;
     border-radius: 10px;
     margin-left: 2.5rem;
     margin-top: 2.5rem;
     padding: 10px;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
     width: 100px;
+    background-color: rgb(203, 0, 0);
+    color: white;
+    border: none;
     
 }
 
 button:hover{
-  background-color: #F77F00;
+  background-color: red;
   color: #003049;
-  border: 1px solid #F77F00;
 }
-
+.btn-edit{
+  background-color: green;
+  color: white;
+}
 .btn-edit:hover{
-  background-color: #FCBF49;
+  background-color: limegreen;
+  color: white;
 }
 
 .form-control{
-  background-color: #003049;
-  color: #FCBF49;
+  background-color: whitesmoke;
+  color: #003049;
   padding: 15px;
   font-size: 1.4rem;
 }
 .form-control::placeholder{
-  color: #FCBF49;
+  color: #003049;
 }

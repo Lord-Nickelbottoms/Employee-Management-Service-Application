@@ -8,8 +8,8 @@
 
 *{
     box-sizing: border-box;
-    background-color: #004063;
-    color: #EAE2B7;
+    background-color: whitesmoke;
+    color: #003049;
     margin: 0;
     padding: 0;
 }
@@ -39,11 +39,11 @@ form{
     padding: 3rem 2rem;
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
     /* display: flex;
     justify-content: center;
     align-items: center; */
 }
-
 .input-container{
     padding: 20px;
     display: flex;
@@ -58,14 +58,14 @@ form{
     padding: 15px 10px;
     font-size: 1.4rem;
     border-radius: 10px;
-    border: 1px solid #FCBF49;
+    border: 2px solid #003049
 }
 
 .input-container #address{
     border-radius: 10px;
     padding: 15px 15px;
     font-size: 24px;
-    border: 1px solid #FCBF49;
+    border: 2px solid #003049
 }
 
 .input-container select{
@@ -73,7 +73,8 @@ form{
     padding-bottom: 15px;
     font-size: 1.4rem;
     border-radius: 10px;
-    border: 1px solid #FCBF49;
+    border: 2px solid #003049;
+    cursor: pointer;
 }
 
 .button{
@@ -83,16 +84,19 @@ form{
 
 .button button{
     font-size: 1.5rem;
-    border: 1px solid #FCBF49;
+    border: 1px solid green;
     border-radius: 10px;
     margin-right: 1.6rem;
     margin-top: 1.4rem;
-    padding: 10px;
+    padding: 20px;
     transition: 0.3s;
+    color: white;
+    background-color: green;
 }
 
 .button button:hover{
-    background-color: #F77F00;
+    background-color: lime;
     color: #003049;
-    border: 1px solid #F77F00;
+    border: 1px solid lime;
+    cursor: pointer;
 }
